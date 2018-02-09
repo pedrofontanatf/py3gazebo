@@ -13,15 +13,15 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import inertial_pb2
-import collision_pb2
-import visual_pb2
-import sensor_pb2
-import projector_pb2
-import pose_pb2
-import battery_pb2
-import density_pb2
-import vector3d_pb2
+from . import inertial_pb2
+from . import collision_pb2
+from . import visual_pb2
+from . import sensor_pb2
+from . import projector_pb2
+from . import pose_pb2
+from . import battery_pb2
+from . import density_pb2
+from . import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

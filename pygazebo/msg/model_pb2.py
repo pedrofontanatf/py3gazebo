@@ -13,12 +13,12 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import joint_pb2
-import link_pb2
-import plugin_pb2
-import pose_pb2
-import visual_pb2
-import vector3d_pb2
+from . import joint_pb2
+from . import link_pb2
+from . import plugin_pb2
+from . import pose_pb2
+from . import visual_pb2
+from . import vector3d_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

@@ -13,10 +13,10 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import light_pb2
-import model_pb2
-import world_control_pb2
-import wrench_pb2
+from . import light_pb2
+from . import model_pb2
+from . import world_control_pb2
+from . import wrench_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

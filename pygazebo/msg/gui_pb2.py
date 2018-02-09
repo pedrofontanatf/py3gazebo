@@ -13,8 +13,8 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import gui_camera_pb2
-import plugin_pb2
+from . import gui_camera_pb2
+from . import plugin_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

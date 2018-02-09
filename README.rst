@@ -61,3 +61,15 @@ local machine on the default port.
   
   loop = trollius.get_event_loop()
   loop.run_until_complete(publish_loop())
+
+
+Updating Proto Messages
+------------------------
+If the message interface to Gazebo changes the messages in msg/ directory must be recreated
+
+```
+protoc --proto_path=gazebo/gazebo/msgs                                                                                                                                                                                --python_out=/pygazebo/pygazebo/msg                                                                                                                                                                                  msgs/*proto 
+```
+To migrate to Python3 use the 2to3 tool
+
+

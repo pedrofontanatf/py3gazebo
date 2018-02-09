@@ -13,8 +13,8 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import vector2d_pb2
-import distortion_pb2
+from . import vector2d_pb2
+from . import distortion_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
