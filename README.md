@@ -3,7 +3,7 @@
 Their hasn't been an activity of this parent class so this fork provides the following changes,
 * Python3 support
 * AsyncIO support
-* Gazebo v11 support
+* Gazebo v9,v11 support
 
 # Example 
 
@@ -54,7 +54,8 @@ If the message interface to Gazebo changes the messages in msg/ directory must b
 Run this command from the parent directory,
 
 ```
-protoc --proto_path=gazebo/gazebo/msgs --python_out=/pygazebo/pygazebo/msg gazebo/gazebo/msgs/*proto 
+GAZEBO_HOME=
+protoc --proto_path=$GAZEBO_HOME/gazebo/msgs --python_out=pygazebo/pygazebo/msg $GAZEBO_HOME/gazebo/msgs/*proto 
 ```
 
 To migrate to Python3 use the 2to3 tool from the directory where all of the generated Python messages are found.
