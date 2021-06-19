@@ -13,10 +13,10 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import pose_pb2 as pose__pb2
-import geometry_pb2 as geometry__pb2
-import surface_pb2 as surface__pb2
-import visual_pb2 as visual__pb2
+from . import pose_pb2 as pose__pb2
+from . import geometry_pb2 as geometry__pb2
+from . import surface_pb2 as surface__pb2
+from . import visual_pb2 as visual__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

@@ -13,8 +13,8 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import vector3d_pb2 as vector3d__pb2
-import time_pb2 as time__pb2
+from . import vector3d_pb2 as vector3d__pb2
+from . import time_pb2 as time__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

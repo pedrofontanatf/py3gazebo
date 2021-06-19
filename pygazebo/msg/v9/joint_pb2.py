@@ -13,9 +13,9 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import axis_pb2 as axis__pb2
-import pose_pb2 as pose__pb2
-import sensor_pb2 as sensor__pb2
+from . import axis_pb2 as axis__pb2
+from . import pose_pb2 as pose__pb2
+from . import sensor_pb2 as sensor__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

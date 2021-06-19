@@ -13,15 +13,15 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import boxgeom_pb2 as boxgeom__pb2
-import cylindergeom_pb2 as cylindergeom__pb2
-import spheregeom_pb2 as spheregeom__pb2
-import planegeom_pb2 as planegeom__pb2
-import imagegeom_pb2 as imagegeom__pb2
-import heightmapgeom_pb2 as heightmapgeom__pb2
-import meshgeom_pb2 as meshgeom__pb2
-import vector3d_pb2 as vector3d__pb2
-import polylinegeom_pb2 as polylinegeom__pb2
+from . import boxgeom_pb2 as boxgeom__pb2
+from . import cylindergeom_pb2 as cylindergeom__pb2
+from . import spheregeom_pb2 as spheregeom__pb2
+from . import planegeom_pb2 as planegeom__pb2
+from . import imagegeom_pb2 as imagegeom__pb2
+from . import heightmapgeom_pb2 as heightmapgeom__pb2
+from . import meshgeom_pb2 as meshgeom__pb2
+from . import vector3d_pb2 as vector3d__pb2
+from . import polylinegeom_pb2 as polylinegeom__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

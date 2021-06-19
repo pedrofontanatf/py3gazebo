@@ -13,12 +13,12 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import color_pb2 as color__pb2
-import fog_pb2 as fog__pb2
-import sky_pb2 as sky__pb2
-import light_pb2 as light__pb2
-import joint_pb2 as joint__pb2
-import model_pb2 as model__pb2
+from . import color_pb2 as color__pb2
+from . import fog_pb2 as fog__pb2
+from . import sky_pb2 as sky__pb2
+from . import light_pb2 as light__pb2
+from . import joint_pb2 as joint__pb2
+from . import model_pb2 as model__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

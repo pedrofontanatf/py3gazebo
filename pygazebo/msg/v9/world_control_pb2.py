@@ -13,7 +13,7 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import world_reset_pb2 as world__reset__pb2
+from . import world_reset_pb2 as world__reset__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

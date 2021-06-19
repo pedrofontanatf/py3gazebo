@@ -13,11 +13,11 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import color_pb2 as color__pb2
-import pose_pb2 as pose__pb2
-import quaternion_pb2 as quaternion__pb2
-import time_pb2 as time__pb2
-import vector3d_pb2 as vector3d__pb2
+from . import color_pb2 as color__pb2
+from . import pose_pb2 as pose__pb2
+from . import quaternion_pb2 as quaternion__pb2
+from . import time_pb2 as time__pb2
+from . import vector3d_pb2 as vector3d__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

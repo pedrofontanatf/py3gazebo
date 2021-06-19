@@ -13,8 +13,8 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import contact_pb2 as contact__pb2
-import time_pb2 as time__pb2
+from . import contact_pb2 as contact__pb2
+from . import time_pb2 as time__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

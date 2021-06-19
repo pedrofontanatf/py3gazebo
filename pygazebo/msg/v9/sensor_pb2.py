@@ -13,13 +13,13 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import pose_pb2 as pose__pb2
-import camerasensor_pb2 as camerasensor__pb2
-import raysensor_pb2 as raysensor__pb2
-import contactsensor_pb2 as contactsensor__pb2
-import logical_camera_sensor_pb2 as logical__camera__sensor__pb2
-import gps_sensor_pb2 as gps__sensor__pb2
-import imu_sensor_pb2 as imu__sensor__pb2
+from . import pose_pb2 as pose__pb2
+from . import camerasensor_pb2 as camerasensor__pb2
+from . import raysensor_pb2 as raysensor__pb2
+from . import contactsensor_pb2 as contactsensor__pb2
+from . import logical_camera_sensor_pb2 as logical__camera__sensor__pb2
+from . import gps_sensor_pb2 as gps__sensor__pb2
+from . import imu_sensor_pb2 as imu__sensor__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
