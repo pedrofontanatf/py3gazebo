@@ -54,8 +54,8 @@ If the message interface to Gazebo changes the messages in msg/ directory must b
 Run this command from the parent directory,
 
 ```
-GAZEBO_HOME=
-protoc --proto_path=$GAZEBO_HOME/gazebo/msgs --python_out=pygazebo/pygazebo/msg $GAZEBO_HOME/gazebo/msgs/*proto 
+GAZEBO_HOME=/usr/include/gazebo-9
+protoc --proto_path=$GAZEBO_HOME/gazebo/msgs/proto --python_out=pygazebo/pygazebo/msg $GAZEBO_HOME/gazebo/msgs/proto/*
 ```
 
 To migrate to Python3 use the 2to3 tool from the directory where all of the generated Python messages are found.
@@ -64,4 +64,12 @@ The 'w' flag will write the changes back to the file. If this flag is not presen
 ```
 2to3 -w *.py
 ```
+
+To fix the import statements for Python3, also run:
+
+```
+sed -i -r 's/^import (.+_pb2.*)/from . import \1/g' *_pb2*.py
+```
+
+For more info, see https://github.com/protocolbuffers/protobuf/issues/1491#issuecomment-690613585
 
