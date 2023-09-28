@@ -19,7 +19,7 @@ try:
 except ImportError:
     import trollius as asyncio
 
-import mock
+import unittest.mock as mock
 import pytest
 import socket
 
@@ -30,6 +30,10 @@ from pygazebo.msg import packet_pb2
 from pygazebo.msg import publishers_pb2
 from pygazebo.msg import publish_pb2
 from pygazebo.msg import subscribe_pb2
+
+
+# NOTE: Since Python3.7 aync is a reserved word
+create_task = getattr(asyncio, 'async')
 
 
 class PipeChannel(object):
@@ -53,7 +57,7 @@ class PipeChannel(object):
             callback()
             return
 
-        future = asyncio.async(self.other.queue.put(data[0:1]))
+        future = create_task(self.other.queue.put(data[0:1]))
         future.add_done_callback(lambda future: self.write(data[1:], callback))
 
     def write_frame(self, payload, callback):
@@ -89,7 +93,7 @@ class PipeChannel(object):
             callback(data)
             return
 
-        future = asyncio.async(self.queue.get())
+        future = create_task(self.queue.get())
         future.add_done_callback(
             lambda future: self.recv_handler(
                 future.result(), data, total_size, callback))
@@ -203,7 +207,7 @@ class FakeSocket(object):
 
 class ManagerFixture(object):
     def __init__(self):
-        print "ManagerFixture.__init__"
+        print("ManagerFixture.__init__")
         self.manager = None
 
         self.server = MockServer()
@@ -236,7 +240,7 @@ class ManagerFixture(object):
         self.manager = manager_future.result()
 
     def connect(self, socket, addr):
-        print "connect, returning:", self.next_connect_socket
+        print("connect, returning: {}".format(self.next_connect_socket))
         socket.pipe = self.next_connect_socket
         self.next_connect_socket = None
 
