@@ -10,3 +10,6 @@
 _build
 dist
 *.bak
+
+venv/
+build/
